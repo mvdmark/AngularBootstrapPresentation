@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Normalization</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="scopeExample">
+  <div ng-controller="MyController">
+	Normalization
+    <input type="text" ng-model="username">
+  <hr>
+  1 <span ng-bind="username"></span> <br/>
+  2 <span ng:bind="username"></span> <br/>
+  3 <span ng_bind="username"></span> <br/>
+  4 <span data-ng-bind="username"></span> <br/>
+  5 <span x-ng-bind="username"></span> <br/>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html ng-app="ui.bootstrap.demo">
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+		<script src="datepicker.js"></script>
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div ng-controller="DatepickerCtrl">
+		<div class="row">
+			<div class="col-md-3">
+				<p class="input-group">
+				  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" datepicker-mode="day" is-open="status.opened" 
+					show-weeks="false" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+				  <span class="input-group-btn">
+					<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+				  </span>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div style="display:inline-block; min-height:290px;">
+					<datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

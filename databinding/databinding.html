@@ -1,0 +1,14 @@
+<html>
+	<head>
+	  <title>Data binding</title>
+	  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"/></script>
+	  <script src="databinding.js"/></script>
+	</head>
+	<body ng-app="dataBindingExample">
+		<div ng-controller="dataBindingController">
+			Write your name:
+			<input ng-model="name">
+			<hr>{{name}}			
+		</div>
+	</body>
+</html>

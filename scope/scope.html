@@ -1,0 +1,18 @@
+<html>
+	<head>
+	  <title>Scope</title>
+	  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	  <script src="scope.js"></script>
+	</head>
+	<body ng-app="scopeExample">
+		<div ng-controller="ScopeController">
+			Add Todo:
+			<input data-ng-model="newTodoItem"><button data-ng-click="addTodoItem(newTodoItem)">Add Todo</button>
+			<hr>
+			<li data-ng-repeat="todoItem in todoItems">
+				{{todoItem}}
+				<button data-ng-click="removeTodoItem($index)">Remove Todo</button>
+			</li>
+		</div>
+	</body>
+</html>
